@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تأجير كراسي وطاولات ومستلزمات الحفلات - أفضل الأسعار والجودة</title>
-    <meta name="description" content="تأجير كراسي، طاولات، كنب، جلسات، خيام ومستلزمات الحفلات في الدمام، الخبر، القطيف، سيهات، الجبيل. أفضل جودة وأسعار تنافسية.">
-    <meta name="keywords" content="تأجير كراسي, تأجير طاولات, تأجير كنب, تأجير جلسات, تأجير خيام, حفلات, مناسبات, أفراح, الدمام, الخبر, القطيف, سيهات, الجبيل">
+    <title>تأجير كراسي وطاولات ومستلزمات الحفلات - أفضل الأسعار والجودة | الدمام | الخبر | القطيف</title>
+    <meta name="description" content="خدمات تأجير كراسي، طاولات، كنب، جلسات، خيام، مكيفات ومستلزمات الحفلات في الدمام، الخبر، القطيف، سيهات، الجبيل. أفضل جودة وأسعار تنافسية. قهوجيين وصبابين متاحين.">
+    <meta name="keywords" content="تأجير كراسي, تأجير طاولات, تأجير كنب, تأجير جلسات, تأجير خيام, تأجير مكيفات, حفلات, مناسبات, أفراح, الدمام, الخبر, القطيف, سيهات, الجبيل, قهوجي, صباب, مستلزمات حفلات, تأجير معدات حفلات, كراسي حفلات, طاولات مناسبات, كنب استقبال, جلسات عربية, خيام مناسبات, مكيفات حفلات, قهوجي حفلات, صباب قهوة, تأجير في الدمام, تأجير في الخبر, تأجير في القطيف, تأجير في سيهات, تأجير في الجبيل, خدمات حفلات, تجهيز حفلات, أغراض حفلات, مناسبات وأفراح, أعراس, حفلات تخرج, فعاليات, معارض, مؤتمرات, كراسي طاولات, طاولات طعام, كراسي حدائق, كراسي شفاف, كراسي ملكية, طاولات مستديرة, طاولات مستطيلة, كنب استراحات, كنب حدائق, جلسات أرضية, جلسات شعبية, جلسات مغربية, خيام كبيرة, خيام صغيرة, مكيفات صحراوية, مكيفات مركزية, قهوجي مناسبات, صباب مناسبات, معدات إضاءة, دفايات خارجية, تدفئة حفلات, تأجير اقتصادي, أسعار مناسبة, خدمة توصيل, تركيب مجاني">
+    <meta name="author" content="تأجير مستلزمات الحفلات">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -190,6 +192,7 @@
         .service-img {
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
         
         .service-img img {
@@ -210,6 +213,124 @@
         .service-content h3 {
             color: var(--primary);
             margin-bottom: 15px;
+        }
+        
+        .service-contact {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .service-contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .service-contact a:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+        
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .image-gallery img {
+            width: calc(50% - 5px);
+            border-radius: 8px;
+            height: 120px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Modal for Gallery */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
         }
         
         /* FAQ Section */
@@ -292,6 +413,16 @@
             margin-bottom: 20px;
         }
         
+        /* WhatsApp Icon Style */
+        .fa-whatsapp {
+            color: #25D366 !important;
+        }
+        
+        /* Phone Icon Style */
+        .fa-phone {
+            color: #34B7F1 !important;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -371,6 +502,15 @@
             .section-title h2 {
                 font-size: 28px;
             }
+            
+            .image-gallery img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
         }
     </style>
 </head>
@@ -398,10 +538,10 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>تأجير كراسي وطاولات ومستلزمات الحفلات</h1>
-            <p>نوفر لكم جميع مستلزمات الحفلات والمناسبات بأفضل جودة وأقل الأسعار في المنطقة الشرقية. خبرة طويلة في توفير حلول متكاملة لحفلاتكم.</p>
+            <p>نوفر لكم جميع مستلزمات الحفلات والمناسبات بأفضل جودة وأقل الأسعار في المنطقة الشرقية. خبرة طويلة في توفير حلول متكاملة لحفلاتكم. خدمة تأجير الكراسي والطاولات والكنب والخيام والمكيفات مع طاقم متخصص من القهوجيين والصبابين.</p>
             <div class="hero-buttons">
-                <a href="tel:0503400517" class="btn"><i class="fas fa-phone"></i> اتصل بنا</a>
-                <a href="https://wa.me/966503400517" class="btn btn-outline"><i class="fab fa-whatsapp"></i> واتساب</a>
+                <a href="tel:0503400517" class="btn"><i class="fas fa-phone"></i> اتصل بنا الآن</a>
+                <a href="https://wa.me/966503400517" class="btn btn-outline"><i class="fab fa-whatsapp"></i> تواصل عبر الواتساب</a>
             </div>
         </div>
     </section>
@@ -412,93 +552,273 @@
             <div class="section-title">
                 <h2>خدماتنا</h2>
             </div>
-           
+            
+            <div class="services-grid">
+                <!-- خدمة تأجير الكراسي -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/RVjMVVDH/b27cab9e-7d3c-42b4-a26f-6f88360be288.jpg" alt="تأجير كراسي ملكية فاخرة للحفلات في الدمام">
+                    </div>
                     <div class="service-content">
                         <h3>تأجير كراسي</h3>
-                        <p>كراسي بجودة عالية ومريحة للجلوس، متوفرة بألوان وأشكال متنوعة تناسب جميع أنواع الحفلات والمناسبات.</p>
+                        <p>كراسي بجودة عالية ومريحة للجلوس، متوفرة بألوان وأشكال متنوعة تناسب جميع أنواع الحفلات والمناسبات. كراسي ملكية فاخرة وكراسي شفاف أنيقة.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/255m0bqg/28be19a1-8f56-47c0-8881-f447d8753ff6.jpg" alt="كراسي ملكية فاخرة لتأجير في المنطقة الشرقية">
+                            <img src="https://i.postimg.cc/gj3Px35L/f8c5f4fb-ccbb-4532-9ae2-ef730a50305c.jpg" alt="تأجير كراسي شفاف للحفلات والمناسبات">
+                            <img src="https://i.postimg.cc/GtwWnH2L/9c6fc250-bf70-466c-b928-424452cf138c.jpg" alt="تأجير كراسي فاخرة في الخبر والدمام">
+                            <img src="https://i.postimg.cc/RVjMVVDH/b27cab9e-7d3c-42b4-a26f-6f88360be288.jpg" alt="أفضل أسعار تأجير كراسي في القطيف وسيهات">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                     <div class="service-img">
-                       <img src="https://i.postimg.cc/RVjMVVDH/b27cab9e-7d3c-42b4-a26f-6f88360be288.jpg" 
-                               alt="كرسي ملكي فاخر" width="300" height="200">
-                       <img src="https://i.postimg.cc/255m0bqg/28be19a1-8f56-47c0-8881-f447d8753ff6.jpg" 
-                               alt="كرسي ملكي فاخر للحفلات" width="300" height="200">
-                       <img src="https://i.postimg.cc/gj3Px35L/f8c5f4fb-ccbb-4532-9ae2-ef730a50305c.jpg" 
-                               alt="كرسي شفاف للحفلات والمناسبات" width="300" height="200">
-                       <img src="https://i.postimg.cc/GtwWnH2L/9c6fc250-bf70-466c-b928-424452cf138c.jpg" 
-                                 alt="كرسي شفاف فاخر" width="300" height="200">
-                   </div>
-                    
+                </div>
+                
+                <!-- خدمة تأجير الطاولات -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/fRhzDqnn/0e6007f1-e6f6-4135-9845-85f068183d8f.jpg" alt="تأجير طاولات وكراسي للمناسبات في الدمام">
+                    </div>
                     <div class="service-content">
-                        <h3>تأجير كراسي وطاولات</h3>
-                        <p>طاولات وكراسي وطاولات جانبية بمقاسات مختلفة، مصنوعة من أجود المواد ومصممة لتلبي احتياجات مناسبتك.</p>
-                   <div class="service-img">
-                    <img src="https://i.postimg.cc/fRhzDqnn/0e6007f1-e6f6-4135-9845-85f068183d8f.jpg" 
-                         alt="تأجير طاولات وكراسي للمناسبات" width="300" height="200">
-                    <img src="https://i.postimg.cc/HkcVBhfQ/1f367736-28c3-4f7d-afc8-002ff7025f05.jpg" 
-                         alt="تأجير كراسي وطاولات للحفلات" width="300" height="200">
-                   <img src="https://i.postimg.cc/YCWC1mWR/6c19c493-f550-479d-9a76-c797e922545f.jpg" 
-                        alt="تأجير طاولات طعام للمناسبات" width="300" height="200">
-                     </div>
-                           
-               <div class="service-content">
-                  <h3>تأجير كنب</h3>
-                     <p>كنب فاخر ومريح للاستراحات واستقبال الضيوف، متوفر بمقاسات وألوان مختلفة تناسب ديكور مناسبتك.</p>
-        
-              <div class="service-img">
-                 <img src="https://i.postimg.cc/3Js1tmMx/7dde679e-a70a-47ad-90c5-91abe7d74452.jpg" alt="تأجير كنب فاخر للمناسبات" width="300" height="200">
-                 <img src="https://i.postimg.cc/85YMjgNz/7ae4ed2a-087a-477e-a024-38d38f18200d.jpg" alt="تأجير كنب مريح وفخم للحفلات" width="300" height="200">
-                 <img src="https://i.postimg.cc/0y5YWfWx/3aa81651-d702-4486-a596-425af4cb30bd.jpg" alt="تأجير كنب أنيق ومريح للمناسبات" width="300" height="200">
-            </div>
-
+                        <h3>تأجير طاولات وكراسي</h3>
+                        <p>طاولات وكراسي وطاولات جانبية بمقاسات مختلفة، مصنوعة من أجود المواد ومصممة لتلبي احتياجات مناسبتك. مجموعة متكاملة متناسقة.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/HkcVBhfQ/1f367736-28c3-4f7d-afc8-002ff7025f05.jpg" alt="تأجير كراسي وطاولات للحفلات والأفراح">
+                            <img src="https://i.postimg.cc/YCWC1mWR/6c19c493-f550-479d-9a76-c797e922545f.jpg" alt="تأجير طاولات طعام للمناسبات في الجبيل">
+                            <img src="https://i.postimg.cc/fRhzDqnn/0e6007f1-e6f6-4135-9845-85f068183d8f.jpg" alt="طاولات وكراسي لتأجير بأسعار مناسبة">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خدمة تأجير الكنب -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/3Js1tmMx/7dde679e-a70a-47ad-90c5-91abe7d74452.jpg" alt="تأجير كنب فاخر للمناسبات في الخبر">
+                    </div>
+                    <div class="service-content">
+                        <h3>تأجير كنب</h3>
+                        <p>كنب فاخر ومريح للاستراحات واستقبال الضيوف، متوفر بمقاسات وألوان مختلفة تناسب ديكور مناسبتك. كنبات عصرية ومريحة.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/85YMjgNz/7ae4ed2a-087a-477e-a024-38d38f18200d.jpg" alt="تأجير كنب مريح وفخم للحفلات في القطيف">
+                            <img src="https://i.postimg.cc/0y5YWfWx/3aa81651-d702-4486-a596-425af4cb30bd.jpg" alt="تأجير كنب أنيق ومريح للمناسبات في سيهات">
+                            <img src="https://i.postimg.cc/3Js1tmMx/7dde679e-a70a-47ad-90c5-91abe7d74452.jpg" alt="أفضل أنواع الكنب للتأجير في المنطقة الشرقية">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خدمة تأجير الجلسات -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/R028wNw7/4433b34f-72a3-4c14-a701-730f29683ffd.jpg" alt="تأجير جلسات شعبية للمناسبات في الدمام">
+                    </div>
                     <div class="service-content">
                         <h3>تأجير جلسات</h3>
-                        <p>جلسات عربية وأرضية فاخرة مع وسائد مريحة، مثالية للجالسين الذين يفضلون الجلسة العربية الأصيلة.</p>
-                   <div class="service-img">
-                    <img src="https://i.postimg.cc/R028wNw7/4433b34f-72a3-4c14-a701-730f29683ffd.jpg" 
-                       alt="جلسة شعبية" width="300" height="200">
-                   <img src="https://i.postimg.cc/ht53qfyk/dd3ec319-ce36-4dad-9942-f34bad398d40.jpg" 
-                       alt="جلسة شعبية مريحة للمناسبات" width="300" height="200">
-                  <img src="https://i.postimg.cc/4yPB2dHF/b2c16118-9f2e-4953-86e9-ad7305f44486.jpg" 
-                       alt="جلسة مغربي تقليدي" width="300" height="200">
-                 <img src="https://i.postimg.cc/kgzwpLD9/994e7dee-f3cd-4ef3-a9ac-b04525aa07c3.jpg" 
-                      alt="جلسة مغربي للمناسبات والحفلات" width="300" height="200">
-                 </div>
-                
-                    <div class="service-content">
-                        <h3>تأجير خيام</h3>
-                        <p>خيام متنوعة المقاسات والأشكال مزودة بجميع وسائل الراحة، مناسبة للحفلات الخارجية والفعاليات.</p>
-                  <div class="service-img">
-                    <img src="https://i.postimg.cc/xjBvYLny/7db9a0ce-60b9-49d8-8cf5-2a88b226b5e5.jpg" 
-                             alt="خيمة فاخرة للمناسبات" width="300" height="200">
-                    <img src="https://i.postimg.cc/jS4Pz9NZ/959b1bf0-093a-40b1-b541-e2ee022f2f52.jpg" 
-                             alt="خيمة أنيقة للحفلات والمناسبات" width="300" height="200">
-                  </div>
-
-                        <div class="service-content">
-                        <h3>تأجير مكيفات</h3>
-                        <p>مكيفات متنوعة المقاسات والأشكال مزودة بجميع وسائل الراحة، مكيفات صحراوي مكيفات فريون مناسبة للحفلات الخارجية والفعاليات.</p>
-                  <div class="service-img">
-                    <img src="https://i.postimg.cc/wM5TCK9r/08a070e7-f710-4b03-abcc-79167b859375.jpg" 
-                           alt="مكيف صحراوي للمناسبات" width="300" height="200">
-                    <img src="https://i.postimg.cc/h48DPBqy/5470c78b-3651-42f2-8e63-5d8d8850ad63.jpg" 
-                           alt="مكيف فريون للحفلات والمناسبات" width="300" height="200">
-                </div>
-
-                <div class="service-content">
-                        <h3>قهوجيين وصبابين</h3>
-                        <p>قهوجيين وصبابين وقهوجييات وصبابات، صبابين قهوة قهوجيين الدمام لجميع الحفلات والفعاليات.</p>
-                <div class="service-img" style="display: flex; gap: 10px;">
-                     <img src="https://i.postimg.cc/XYLBZ5SP/01dbd671-dae3-48ad-a43d-1f2e2e6295a9.jpg" 
-                          alt="قهوجي للحفلات والمناسبات" width="300" height="200">
-                    <img src="https://i.postimg.cc/L4PqtwFL/63e64664-d1ff-463a-9a8c-7bd3454d0f8d.jpg" 
-                          alt="صبابي للحفلات والمناسبات" width="300" height="200">
-                </div>
-                            
-                    <div class="service-content">
-                        <h3>مستلزمات إضافية</h3>
-                        <p>نوفر أيضاً حواجز، عقود اضائة، مظلات، دفايات، ممرات، ومستلزمات الحفلات والمناسبات وكل قد تحتاجها في حفلتك.</p>
+                        <p>جلسات عربية وأرضية فاخرة مع وسائد مريحة، مثالية للجالسين الذين يفضلون الجلسة العربية الأصيلة. جلسات شعبية ومغربية تقليدية.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/ht53qfyk/dd3ec319-ce36-4dad-9942-f34bad398d40.jpg" alt="جلسة شعبية مريحة للمناسبات والأفراح">
+                            <img src="https://i.postimg.cc/4yPB2dHF/b2c16118-9f2e-4953-86e9-ad7305f44486.jpg" alt="تأجير جلسة مغربية تقليدية فاخرة">
+                            <img src="https://i.postimg.cc/kgzwpLD9/994e7dee-f3cd-4ef3-a9ac-b04525aa07c3.jpg" alt="جلسة مغربية للمناسبات والحفلات في الخبر">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- خدمة تأجير الخيام -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/xjBvYLny/7db9a0ce-60b9-49d8-8cf5-2a88b226b5e5.jpg" alt="تأجير خيام فاخرة للمناسبات في المنطقة الشرقية">
+                    </div>
+                    <div class="service-content">
+                        <h3>تأجير خيام</h3>
+                        <p>خيام متنوعة المقاسات والأشكال مزودة بجميع وسائل الراحة، مناسبة للحفلات الخارجية والفعاليات. خيام عصرية ومجهزة تجهيزاً كاملاً.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/jS4Pz9NZ/959b1bf0-093a-40b1-b541-e2ee022f2f52.jpg" alt="تأجير خيمة أنيقة للحفلات والمناسبات الخارجية">
+                            <img src="https://i.postimg.cc/xjBvYLny/7db9a0ce-60b9-49d8-8cf5-2a88b226b5e5.jpg" alt="خيام فاخرة لتأجير مع كامل التجهيزات">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خدمة تأجير المكيفات -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/wM5TCK9r/08a070e7-f710-4b03-abcc-79167b859375.jpg" alt="تأجير مكيفات صحراوية للمناسبات في الدمام">
+                    </div>
+                    <div class="service-content">
+                        <h3>تأجير مكيفات</h3>
+                        <p>مكيفات متنوعة المقاسات والأشكال مزودة بجميع وسائل الراحة، مكيفات صحراوية ومكيفات فريون مناسبة للحفلات الخارجية والفعاليات.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/h48DPBqy/5470c78b-3651-42f2-8e63-5d8d8850ad63.jpg" alt="تأجير مكيفات فريون للحفلات والمناسبات الصيفية">
+                            <img src="https://i.postimg.cc/wM5TCK9r/08a070e7-f710-4b03-abcc-79167b859375.jpg" alt="مكيفات صحراوية قوية لتأجير في الخبر والدمام">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خدمة القهوجيين والصبابين -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.postimg.cc/XYLBZ5SP/01dbd671-dae3-48ad-a43d-1f2e2e6295a9.jpg" alt="خدمة قهوجي وصباب متخصص للحفلات">
+                    </div>
+                    <div class="service-content">
+                        <h3>قهوجيين وصبابين</h3>
+                        <p>قهوجيين وصبابين وقهوجييات وصبابات، صبابين قهوة قهوجيين الدمام لجميع الحفلات والفعاليات. طاقم متخصص وذو خبرة واسعة.</p>
+                        <div class="image-gallery">
+                            <img src="https://i.postimg.cc/L4PqtwFL/63e64664-d1ff-463a-9a8c-7bd3454d0f8d.jpg" alt="صباب متخصص في تقديم القهوة العربية للحفلات">
+                            <img src="https://i.postimg.cc/XYLBZ5SP/01dbd671-dae3-48ad-a43d-1f2e2e6295a9.jpg" alt="خدمة قهوجي محترف لتأجير في المناسبات">
+                        </div>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خدمة المستلزمات الإضافية -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="مستلزمات إضافية لتأجير في الحفلات والمناسبات">
+                    </div>
+                    <div class="service-content">
+                        <h3>مستلزمات إضافية</h3>
+                        <p>نوفر أيضاً حواجز، عقود إضاءة، مظلات، دفايات، ممرات، ومستلزمات الحفلات والمناسبات وكل ما قد تحتاج إليه في حفلتك.</p>
+                        <div class="service-contact">
+                            <a href="tel:0503400517" title="اتصال"><i class="fas fa-phone"></i></a>
+                            <a href="https://wa.me/966503400517" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>معرض الأعمال</h2>
+            </div>
+            <div class="gallery-grid">
+                <!-- صور من خدمة الكراسي -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/255m0bqg/28be19a1-8f56-47c0-8881-f447d8753ff6.jpg" alt="كراسي ملكية فاخرة">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/gj3Px35L/f8c5f4fb-ccbb-4532-9ae2-ef730a50305c.jpg" alt="كراسي شفاف أنيقة">
+                </div>
+                
+                <!-- صور من خدمة الطاولات -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/HkcVBhfQ/1f367736-28c3-4f7d-afc8-002ff7025f05.jpg" alt="طاولات وكراسي للحفلات">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/YCWC1mWR/6c19c493-f550-479d-9a76-c797e922545f.jpg" alt="طاولات طعام للمناسبات">
+                </div>
+                
+                <!-- صور من خدمة الكنب -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/85YMjgNz/7ae4ed2a-087a-477e-a024-38d38f18200d.jpg" alt="كنب مريح وفخم">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/0y5YWfWx/3aa81651-d702-4486-a596-425af4cb30bd.jpg" alt="كنب أنيق ومريح">
+                </div>
+                
+                <!-- صور من خدمة الجلسات -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/ht53qfyk/dd3ec319-ce36-4dad-9942-f34bad398d40.jpg" alt="جلسة شعبية مريحة">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/4yPB2dHF/b2c16118-9f2e-4953-86e9-ad7305f44486.jpg" alt="جلسة مغربية تقليدية">
+                </div>
+                
+                <!-- صور من خدمة الخيام -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/jS4Pz9NZ/959b1bf0-093a-40b1-b541-e2ee022f2f52.jpg" alt="خيمة أنيقة للحفلات">
+                </div>
+                
+                <!-- صور من خدمة المكيفات -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/h48DPBqy/5470c78b-3651-42f2-8e63-5d8d8850ad63.jpg" alt="مكيفات فريون">
+                </div>
+                
+                <!-- صور من خدمة القهوجيين -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/L4PqtwFL/63e64664-d1ff-463a-9a8c-7bd3454d0f8d.jpg" alt="صباب قهوة متخصص">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Content Section for SEO -->
+    <section id="seo-content" style="background: rgba(255, 255, 255, 0.9); padding: 50px 0; margin: 40px 0; border-radius: 15px;">
+        <div class="container">
+            <h2 style="text-align: center; color: #8e44ad; margin-bottom: 30px;">تأجير مستلزمات الحفلات في المنطقة الشرقية</h2>
+            
+            <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3 style="color: #f39c12; margin-bottom: 15px;">لماذا تختار خدماتنا لتأجير مستلزمات حفلاتك؟</h3>
+                <p>نحن نقدم خدمة تأجير كراسي وطاولات ومستلزمات الحفلات في جميع أنحاء المنطقة الشرقية بما في ذلك الدمام، الخبر، القطيف، سيهات، والجبيل. مع أكثر من 10 سنوات من الخبرة، نفتخر بتقديم:</p>
+                
+                <ul style="margin: 20px 0; padding-right: 20px;">
+                    <li style="margin-bottom: 10px;">أجود أنواع الكراسي والطاولات والكنب والخيام</li>
+                    <li style="margin-bottom: 10px;">أسعار تنافسية ومناسبة للجميع</li>
+                    <li style="margin-bottom: 10px;">خدمة التوصيل والتركيب المجانية في نطاق الخدمة</li>
+                    <li style="margin-bottom: 10px;">طاقم متخصص من القهوجيين والصبابين المحترفين</li>
+                    <li style="margin-bottom: 10px;">تشكيلة واسعة من المستلزمات الإضافية (مكيفات، إضاءة، دفايات)</li>
+                    <li>التنظيف والتعقيم الشامل بعد كل استخدام</li>
+                </ul>
+                
+                <h3 style="color: #f39c12; margin: 25px 0 15px;">خدماتنا تشمل جميع أنواع المناسبات:</h3>
+                <p>نوفر حلولاً متكاملة لكل أنواع المناسبات بما في ذلك حفلات الزفاف، حفلات التخرج، المناسبات العائلية، المؤتمرات، المعارض، والحفلات الخاصة. سواء كنت تقيم حفلتك في قاعة مغلقة أو في مكان مفتوح، لدينا كل ما تحتاجه لجعل مناسبتك ناجحة ومميزة.</p>
+                
+                <h3 style="color: #f39c12; margin: 25px 0 15px;">مناطق الخدمة:</h3>
+                <p>نغطي جميع مدن ومحافظات المنطقة الشرقية بما في ذلك: الدمام، الخبر، الظهران، القطيف، سيهات، الجبيل، رأس تنورة، وبقية المدن المجاورة. اتصل بنا لمعرفة ما إذا كنا نغطي منطقتك.</p>
+                
+                <h3 style="color: #f39c12; margin: 25px 0 15px;">كيفية الحجز والتأجير:</h3>
+                <p>عملية الحجز لدينا بسيطة وسهلة. فقط اتصل بنا على الرقم 0503400517 أو راسلنا عبر الواتساب على نفس الرقم، وسيقوم فريق خدمة العملاء بتلبية طلبك وتحديد جميع التفاصيل بما في ذلك نوع المعدات المطلوبة، الكميات، تاريخ التوصيل والاستلام، والتكلفة الإجمالية. نقدم عروضاً خاصة للطلبات الكبيرة والحجز المسبق.</p>
+                
+                <h3 style="color: #f39c12; margin: 25px 0 15px;">لماذا تأجير معدات الحفلات أفضل من الشراء؟</h3>
+                <p>تأجير معدات الحفلات يوفر لك العديد من المزايا مقارنة بشرائها، خاصة إذا كنت تقيم المناسبات بشكل غير منتظم. من أهم هذه المزايا:</p>
+                <ul style="margin: 20px 0; padding-right: 20px;">
+                    <li style="margin-bottom: 10px;">توفير كبير في التكاليف خاصة للمناسبات الكبيرة</li>
+                    <li style="margin-bottom: 10px;">عدم الحاجة إلى مساحة تخزين كبيرة للمعدات بعد انتهاء المناسبة</li>
+                    <li style="margin-bottom: 10px;">الحصول على أحدث الموديلات والأشكال دون الحاجة لتجديد المخزون</li>
+                    <li style="margin-bottom: 10px;">تجنب مصاريف الصيانة والإصلاح للمعدات</li>
+                    <li>الاستفادة من خدمة التوصيل والتركيب والتفكيك التي نقدمها</li>
+                </ul>
+                
+                <h3 style="color: #f39c12; margin: 25px 0 15px;">نصائح لاختيار معدات الحفلات المناسبة:</h3>
+                <p>اختيار المعدات المناسبة لحفلتك أمر مهم لضمان نجاحها. إليك بعض النصائح التي قد تساعدك:</p>
+                <ul style="margin: 20px 0; padding-right: 20px;">
+                    <li style="margin-bottom: 10px;">حدد مسبقاً عدد المدعوين لاختيار الكميات المناسبة</li>
+                    <li style="margin-bottom: 10px;">اختر الألوان التي تتناسب مع سمة الحفل وديكور المكان</li>
+                    <li style="margin-bottom: 10px;">ضع في اعتبارك مساحة المكان واختر المعدات المناسبة لها</li>
+                    <li style="margin-bottom: 10px;">اسأل عن خيارات التنسيق والترتيب للمعدات للحصول على أفضل مظهر</li>
+                    <li>احرص على حجز الخدمة مسبقاً خاصة في مواسم الذروة مثل الصيف وشهر رمضان</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -555,6 +875,33 @@
                         <p>نعم، جميع معداتنا تخضع لعملية تنظيف وتعقيم شاملة بعد كل استخدام، وذلك لضمان سلامتكم وصحتكم.</p>
                     </div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل توفرون خدمة القهوجيين والصبابين لجميع المناسبات؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نوفر طاقم متخصص من القهوجيين والصبابين المحترفين لجميع أنواع المناسبات، مع توفير جميع مستلزمات تقديم القهوة العربية.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ماذا يحدث في حالة تلف أو فقدان بعض المعدات؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نحن نثق بعملائنا الكرام، ولكن في حال حدوث أي تلف أو فقدان للمعدات، سيتم محاسبة العميل على قيمة الإصلاح أو الاستبدال حسب الحالة.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون خصومات للكميات الكبيرة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خصومات خاصة للطلبات الكبيرة والحجز المسبق لفترات طويلة. اتصل بنا لمعرفة التفاصيل والعروض المتاحة.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -572,16 +919,18 @@
                         <i class="fas fa-phone"></i>
                         <h3>اتصال هاتفي</h3>
                         <p>0503400517</p>
+                        <a href="tel:0503400517" class="btn" style="padding: 8px 15px; margin-top: 10px; font-size: 14px;">اتصل الآن</a>
                     </div>
                     <div class="contact-method">
                         <i class="fab fa-whatsapp"></i>
                         <h3>واتساب</h3>
                         <p>0503400517</p>
+                        <a href="https://wa.me/966503400517" class="btn btn-outline" style="padding: 8px 15px; margin-top: 10px; font-size: 14px;">تواصل عبر واتساب</a>
                     </div>
                     <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <h3>بريد إلكتروني</h3>
-                        <p>waleedgamal863@gmail.com</p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>المنطقة الشرقية</h3>
+                        <p>الدمام، الخبر، القطيف، سيهات، الجبيل</p>
                     </div>
                 </div>
             </div>
@@ -594,23 +943,33 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>عن تأجير لوازم الحفلات</h3>
-                    <p>نقدم خدمات تأجير مستلزمات الحفلات والمناسبات منذ أكثر من 10 سنوات، نتميز بجودة المنتجات والخدمة المميزة والأسعار التنافسية.</p>
+                    <p>نقدم خدمات تأجير مستلزمات الحفلات والمناسبات منذ أكثر من 10 سنوات، نتميز بجودة المنتجات والخدمة المميزة والأسعار التنافسية. نسعى دائماً لرضا عملائنا وتقديم أفضل تجربة تأجير.</p>
                 </div>
                 <div class="footer-section">
                     <h3>مناطق الخدمة</h3>
-                    <p>الدمام، الخبر، القطيف، سيهات، الجبيل، الظهران، رأس تنورة، وبقية مدن المنطقة الشرقية.</p>
+                    <p>الدمام، الخبر، القطيف، سيهات، الجبيل، الظهران، رأس تنورة، وبقية مدن المنطقة الشرقية. اسأل عن خدمتنا في منطقتك.</p>
                 </div>
                 <div class="footer-section">
                     <h3>وسائل التواصل</h3>
+                    <p>تواصل معنا عبر القنوات التالية:</p>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/bwmshlnbysh?igsh=cGI2eTV0d3dwbms2" target="_blank">
-                             <i class="fab fa-instagram"></i>
-                       </a>
+                        <a href="tel:0503400517" title="اتصل بنا">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/966503400517" title="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bwmshlnbysh?igsh=cGI2eTV0d3dwbms2" target="_blank" title="انستجرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:info@example.com" title="البريد الإلكتروني">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>جميع الحقوق محفوظة &copy; 2023 | تأجير مستلزمات الحفلات</p>
+                <p>جميع الحقوق محفوظة &copy; 2023 | تأجير مستلزمات الحفلات | المنطقة الشرقية - السعودية</p>
             </div>
         </div>
     </footer>
@@ -635,6 +994,32 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Image Gallery Modal
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeModal = document.querySelector(".close");
+
+        // Open modal when clicking on gallery images
+        document.querySelectorAll('.image-gallery img, .gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        // Close modal when clicking outside the image
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         });
     </script>
 </body>
